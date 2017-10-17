@@ -1,3 +1,10 @@
+OVERVIEW
+
+This project contains a Graphical User Interface for Desktops that interfaces with the DigiCue Blue (made by OB Cues) and the BLED112 Bluetooth USB dongle (made by Silicon Labs, sold separately from the DigiCue Blue). The project is written in Python for portability, and includes a py2exe script for compiling to a Windows executable. No system installation is necessary and the program can run from the directory. Run main.py or main.exe to start. serialport.py is the serial port selection GUI, and will load automatically if comport.cfg is blank or does not exist. The program appends comma-delimited data into data.csv for each shot.
+
+You are free to modify and redistribute this code as long as you include the MIT license with your distribution.
+For any questions, please contact Nathan Rhoades at nataddrho(at)gmail(dot)com.
+
 QUICK START GUIDE
 
 The DigiCue Blue is a small electronic coach that attaches to the end of your pool, snooker, or billiards cue. The device communicates with your mobile device and helps improve your game.
