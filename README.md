@@ -5,13 +5,19 @@ This project contains a Graphical User Interface for Desktops that interfaces wi
 You are free to modify and redistribute this code as long as you include the MIT license with your distribution.
 For any questions, please contact Nathan Rhoades at nataddrho(at)gmail(dot)com.
 
+---
+
 BLED112 USB DONGLE
 
 The BLED112 USB dongle is a small Bluetooth low energy transceiver with built-in antenna available from Silicon Labs. See https://www.silabs.com/products/wireless/bluetooth/bluetooth-low-energy-modules/bled112-bluetooth-smart-dongle. It is also available for purchase through a variety of distributors. This software will work with any serial device that interprets Bluegiga commands. Other third-party Bluetooth dongles are not supported.
 
+---
+
 DIGICUE BLUE
 
 The DigiCue Blue is a small electronic coach that attaches to the end of your pool, snooker, or billiards cue. The device communicates with your mobile device via Bluetooth and helps improve your game. See www.digicue.net for more information. Please note that the original DigiCue does not support wireless communication.
+
+---
 
 HOW TO USE
 1. Insert the DigiCue Blue into the rubber housing that best fits your cue (there are two sizes) with the power switch notch aligned with the center of the DigiCue Logo. (See image A).
@@ -32,7 +38,7 @@ HOW TO USE
 
 Battery Replacement: Common non-rechargeable CR2032 lithium ion battery.
 
-
+---
 
 FAULT DESCRIPTIONS
 
