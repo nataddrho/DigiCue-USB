@@ -9,9 +9,9 @@ BLED112 USB DONGLE
 
 The BLED112 USB dongle is a small Bluetooth low energy transceiver with built-in antenna available from Silicon Labs. See https://www.silabs.com/products/wireless/bluetooth/bluetooth-low-energy-modules/bled112-bluetooth-smart-dongle. It is also available for purchase through a variety of distributors. Please note that this software will work with any serial device that interprets Bluegiga commands. Other third-party Bluetooth dongles are not supported.
 
-QUICK START GUIDE
+DIGICUE BLUE
 
-The DigiCue Blue is a small electronic coach that attaches to the end of your pool, snooker, or billiards cue. The device communicates with your mobile device and helps improve your game.
+The DigiCue Blue is a small electronic coach that attaches to the end of your pool, snooker, or billiards cue. The device communicates with your mobile device and helps improve your game. See www.digicue.net for more information.
 
 HOW TO USE
 1. Insert the DigiCue Blue into the rubber housing that best fits your cue (there are two sizes) with the power switch notch aligned with the center of the DigiCue Logo. (See image A).
