@@ -8,13 +8,13 @@ For any questions, please contact Nathan Rhoades at nataddrho(at)gmail(dot)com.
 If you wish to run the app without using the exe file there are a couple things to cover first. There are external libraries used in this project which you will need installed in order to run the command `python main.py`. These libraries can be found in the `requirements.txt` file, and can all be installed in one command once a virtual environment has been setup. Here is a walkthrough:
 
 1. Install virtualenv (`pip install virtualenv`) or see this link: https://virtualenv.pypa.io/en/stable/installation/
-2. Run virtualenv from the root directory of this project to create a directory for the new virtual environment `venv`.:
+2. Run virtualenv from the root directory of this project to create a directory for the new virtual environment `venv`:
     - `virtualenv venv`
-3. Run the command to activate this virtual environment: (from the root directory, with access to the new folder `venv`)
+3. Run the command to activate this virtual environment (from the root directory, with access to the new folder `venv`):
     - `source venv/bin/activate`
 4. You should now see `(venv)` in front of your command prompt. If this is the case, you are now encapsulated in your virtual environment, and anything you install via pip will not affect your global installations.
     - The command `deactivate` will get you out of this virtual environment.
-5. Run the command `pip install -r requirements.txt`
+5. Run the command `pip install -r requirements.txt` to install all external dependencies for this project.
 6. Once this finishes, you are good to go. Just make sure to repeat step 3 whenever you're not in the virtual environment anymore. You should now be able to run `python main.py`, or `python src/main.py` if you're still in the root directory.
 
 # BLED112 USB DONGLE
