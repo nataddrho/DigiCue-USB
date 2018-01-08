@@ -1,4 +1,4 @@
-#Nathan Rhoades 10/13/2017
+# Nathan Rhoades 10/13/2017
 
 help = """QUICK START GUIDE
 
@@ -29,14 +29,14 @@ FAULT DESCRIPTIONS
 
 Everytime the USB dongle receives a shot from the selected DigiCue Blue, it will update a horizontal bar graph displaying metrics of eight different parameters of your stroke. The bar graph will fill from the left to the right, with the highest score as a completely filled bar. Each bar has a vertical black line indicating the currently selected threshold level. These can be changed in the Config tab. Values less than the threshold will be displayed as red, and values equal to or more than the threshold will be displayed as green. The actual value of each shot score is displayed numerically. Also, a smaller gray bar under each bar shows the average score for the current instance that the program is opened. Close and re-open the program to reset.
 
-All data is logged in data.csv in comma-delimited format. You may copy, rename, save, maintain, and plot these data files as you wish. 
+All data is logged in data.csv in comma-delimited format. You may copy, rename, save, maintain, and plot these data files as you wish.
 
 
 JAB
 
 Measures the amount of rapid deceleration of the cue after impact with a score from 1 to 10. A low score of 1 means that the cue was pulled back towards the player very quickly after impact with the cue ball, and a high score of 10 means that the cue was not pulled back towards the player at all.
 
-Achieve a high score to reduce pre-impact-anticipation from causing tip location errors and increase the predictability in accuracy and power. 
+Achieve a high score to reduce pre-impact-anticipation from causing tip location errors and increase the predictability in accuracy and power.
 
 
 FOLLOW THROUGH
@@ -94,4 +94,3 @@ Achieve a long pause time to eliminate backstroke to forward stroke transition e
 ---
 OB Cues 962 N Ave, Suite 700, Plano, TX 75074
 """
-
