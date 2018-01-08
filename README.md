@@ -1,4 +1,4 @@
-OVERVIEW
+# OVERVIEW
 
 This project contains a Graphical User Interface for Desktops that interfaces with the DigiCue Blue (made by OB Cues) and the BLED112 Bluetooth USB dongle (made by Silicon Labs, sold separately from the DigiCue Blue). The project is written in Python for portability, and includes a py2exe script for compiling to a Windows executable. No system installation is necessary and the program can run from the directory. Run main.py or main.exe to start. serialport.py is the serial port selection GUI, and will load automatically if comport.cfg is blank or does not exist. The program appends comma-delimited data into data.csv for each shot.
 
@@ -7,19 +7,34 @@ For any questions, please contact Nathan Rhoades at nataddrho(at)gmail(dot)com.
 
 ---
 
-BLED112 USB DONGLE
+# SETUP PYTHON APP
+If you wish to run the app without using the exe file there are a couple things to cover first. There are external libraries used in this project which you will need installed in order to run the command "python main.py". These libraries can be found in the requirements.txt file, and can all be installed in one command once a virtual environment has been setup. Here is a walkthrough:
+
+1. Install virtualenv [https://virtualenv.pypa.io/en/stable/installation/]
+2. Run virtualenv from the root directory of this project:
+    - `virtualenv venv`
+3. Run the command to activate this virtual environment: (from the root directory, with access to the new folder `venv`)
+    - `source venv/bin/activate`
+    - The command `deactivate` will get you out of this virtual environment.
+4. You should now see `(venv)` in front of your command prompt. If this is the case, you are now encapsulated in your virtual environment, and anything you install via pip will not affect your global installations.
+5. Run the command `pip install -r requirements.txt`
+6. Once this finishes, you are good to go. Just make sure to repeat step 3 whenever you're not in the virtual environment anymore. You should now be able to run `python main.py`, or `python src/main.py` if you're still in the root directory.
+
+---
+
+# BLED112 USB DONGLE
 
 The BLED112 USB dongle is a small Bluetooth low energy transceiver with built-in antenna available from Silicon Labs. See https://www.silabs.com/products/wireless/bluetooth/bluetooth-low-energy-modules/bled112-bluetooth-smart-dongle. It is also available for purchase through a variety of distributors. This software will work with any serial device that interprets Bluegiga commands. Other third-party Bluetooth dongles are not supported.
 
 ---
 
-DIGICUE BLUE
+# DIGICUE BLUE
 
 The DigiCue Blue is a small electronic coach that attaches to the end of your pool, snooker, or billiards cue. The device communicates with your mobile device via Bluetooth and helps improve your game. See www.digicue.net for more information. Please note that the original DigiCue does not support wireless communication.
 
 ---
 
-HOW TO USE
+# HOW TO USE
 1. Insert the DigiCue Blue into the rubber housing that best fits your cue (there are two sizes) with the power switch notch aligned with the center of the DigiCue Logo. (See image A).
 
 2. Push the DigiCue Blue down towards the bottom of the rubber housing so that the Power Button Circle is in line with the power button on the DigiCue Blue. (See image B). A rib in the inside of the housing will hold the DigiCue Blue in place.
@@ -40,21 +55,21 @@ Battery Replacement: Common non-rechargeable CR2032 lithium ion battery.
 
 ---
 
-FAULT DESCRIPTIONS
+# FAULT DESCRIPTIONS
 
 Everytime the USB dongle receives a shot from the selected DigiCue Blue, it will update a horizontal bar graph displaying metrics of eight different parameters of your stroke. The bar graph will fill from the left to the right, with the highest score as a completely filled bar. Each bar has a vertical black line indicating the currently selected threshold level. These can be changed in the Config tab. Values less than the threshold will be displayed as red, and values equal to or more than the threshold will be displayed as green. The actual value of each shot score is displayed numerically. Also, a smaller gray bar under each bar shows the average score for the current instance that the program is opened. Close and re-open the program to reset.
 
 All data is logged in data.csv in comma-delimited format. You may copy, rename, save, maintain, and plot these data files as you wish. 
 
 
-JAB
+### JAB
 
 Measures the amount of rapid deceleration of the cue after impact with a score from 1 to 10. A low score of 1 means that the cue was pulled back towards the player very quickly after impact with the cue ball, and a high score of 10 means that the cue was not pulled back towards the player at all.
 
 Achieve a high score to reduce pre-impact-anticipation from causing tip location errors and increase the predictability in accuracy and power. 
 
 
-FOLLOW THROUGH
+### FOLLOW THROUGH
 
 Measures the smoothness and acceleration of the cue during and after impact with a score from 1 to 10. A low score of 1 means that the follow through was extremely abrupt and punchy with a fast deceleration. A high score of 10 means that the cue smoothly accelerated through the cue ball with a graceful pushing motion.
 
@@ -63,21 +78,21 @@ A high score generally correlates to a higher consistency in cue ball speed cont
 High scores can still be achieved with good acceleration and a physically short follow through length.
 
 
-FINISH
+### FINISH
 
 Measures the length of time that the cue remains reasonably motionless 0.5 seconds after impact, up to 3.5 seconds. A score of 0.5 seconds means that the player did not keep the cue still for at least 0.5 seconds after impact, where as a score of 3.5 seconds means that the player kept the cue still for at least 3.5 seconds. A small amount of movement is tolerable to allow the motion of the cue and arm to come to rest, but any more caused by unnecessary body motion or not staying down on the table will cause a fault.
 
 Achieve a high score to improve consistency in fundamentals and stance by eliminating body movement, head movement, loose foundation, and lack of focus and commitment. Improves the habit of watching exactly where the cue ball contacts the object ball, leading to a higher level of awareness of cue ball control and accuracy.
 
 
-TIP STEER
+### TIP STEER
 
 Measures the amount of left or right force applied to the cue immediately before impact with a score from 1 to 10. A low score of 1 means that a significant amount of sideways force was applied during the forward stroke to cause the tip to steer either to the left or right. A high score of 10 means that almost zero sideways force was applied during the forward stroke and that the motion of the cue remained along to the vertical axis. Higher threshold settings require the cue to remain closer to the vertical axis. Pendulum strokes and shoulder drop strokes will not result in low scores if the motion remains along the vertical axis.
 
 Achieve a high score to improve tip accuracy and stroke mechanics, and to eliminate the use of body English, steering, swooping, and unintentionally moving the cue off of the vertical stroke plane.
 
 
-STRAIGHTNESS
+### STRAIGHTNESS
 
 Measures the amount of radial force (in any direction) applied to the cue immediately before impact with a score from 1 to 10. A low score of 1 means that a significant amount of radial force was applied during the forward stroke to cause the tip to move in a direction other than a straight line. A high score of 10 means that almost zero radial force was applied during the forward stroke and that the motion of the cue stayed along a straight line. Pendulum strokes and shoulder drop strokes may result in low scores even if the cue remains along the vertical axis, whereas perfect piston strokes will not.
 
@@ -86,21 +101,21 @@ Achieve a high score to improve tip accuracy and stroke mechanics, and to elimin
 Straightness is also plotted, viewed from behind the cue looking towards the cue ball. The plot represents the direction of the movement of the tip off of the shotline immediately before impact with the cue ball.
 
 
-FINESSE
+### FINESSE
 
 Measures the amount of speed or power transferred to the cue ball with a score from 1 to 10. A score of 1 means that the cue ball was hit at a medium speed, while a score of 10 means that the cue ball was hit at a very soft speed.
 
 Achieve a high score to practice soft shots and finesse. Attempt to achieve both a high score in finesse and follow through simultaneously.
 
 
-SHOT INTERVAL
+### SHOT INTERVAL
 
 Measures the amount of time between shots up to 2 minutes. A fault will occur if the time between shots is less than the selected threshold.
 
 Useful in helping players with pace and preventing rushed shots.
 
 
-BACKSTROKE PAUSE
+### BACKSTROKE PAUSE
 
 Measures the amount of time that the cue remains reasonably motionless before the final forward stroke, up to 1.5 seconds.
 
